@@ -1,5 +1,5 @@
 import axios from "axios";
-import { apiCagnin, apiFelipe, apiKnight, apiCorreia } from "./ApiKeys";
+import { apiCagnin, apiFelipe, apiKnight, apiCorreia } from "./keys.js";
 
 const apiKeys = [apiCagnin, apiFelipe, apiKnight, apiCorreia];
 
