@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import ReactMarkdown from "react-markdown";
+import html2pdf from "html2pdf.js";
 
 import { apiCagnin, apiFelipe, apiTeste } from '../backend/ApiKeys'; // Certifique-se de que as chaves estão corretas
 
@@ -69,13 +70,20 @@ A resposta deve conter: objetivo, materiais necessários, passo a passo, critér
     }
 
     // Gerar e baixar PDF
+
     function baixarPDF() {
-        const blob = new Blob([resultado], { type: 'application/pdf' });
-        const link = document.createElement('a');
-        link.href = URL.createObjectURL(blob);
-        link.download = 'atividade-historia.pdf';
-        link.click();
+        const elemento = document.getElementById("conteudo-markdown");
+
+        const opt = {
+            margin: 10,
+            filename: `Atividade - ${tema} - ${serie}.pdf`,
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
+        };
+
+        html2pdf().set(opt).from(elemento).save();
     }
+
 
     return (
         <div style={{ padding: 20, maxWidth: 600, margin: '0 auto' }}>
@@ -111,12 +119,20 @@ A resposta deve conter: objetivo, materiais necessários, passo a passo, critér
                 style={{ width: '100%', marginBottom: 10 }}
             />
 
-            <input
-                placeholder="Série"
+            <select
                 value={serie}
                 onChange={(e) => setSerie(e.target.value)}
                 style={{ width: '100%', marginBottom: 20 }}
-            />
+            >
+                <option value="">Selecione a série</option>
+                <option value="6º ano">6º ano</option>
+                <option value="7º ano">7º ano</option>
+                <option value="8º ano">8º ano</option>
+                <option value="9º ano">9º ano</option>
+                <option value="1º ano">1º ano do Ensino Médio</option>
+                <option value="2º ano">2º ano do Ensino Médio</option>
+                <option value="3º ano">3º ano do Ensino Médio</option>
+            </select>
 
             <button onClick={gerarAtividade} disabled={loading}>
                 {loading ? 'Gerando...' : 'Gerar Atividade'}
@@ -125,9 +141,13 @@ A resposta deve conter: objetivo, materiais necessários, passo a passo, critér
             {resultado && (
                 <>
                     <h3>Resultado:</h3>
-                    <pre style={{ whiteSpace: 'pre-wrap', padding: 10 }}>
+                    <div
+                        id="conteudo-markdown"
+                        style={{ padding: 20, background: "#fff", color: "#000" }}
+                    >
                         <ReactMarkdown>{resultado}</ReactMarkdown>
-                    </pre>
+                    </div>
+
                     <button onClick={baixarPDF}>Baixar PDF</button>
                 </>
             )}
