@@ -2,15 +2,11 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import ReactMarkdown from "react-markdown";
 import html2pdf from "html2pdf.js";
+import '../styles/chat.css';
 
-import { apiCagnin, apiFelipe, apiTeste } from '../backend/ApiKeys'; // Certifique-se de que as chaves estão corretas
+import { apiCagnin, apiFelipe, apiTeste } from '../backend/ApiKeys';
 
-// Suas chaves aqui
-const apiKeys = [
-    apiCagnin,
-    apiFelipe,
-    apiTeste
-];
+const apiKeys = [apiCagnin, apiFelipe, apiTeste];
 
 export default function AtividadeHistoria() {
     const [tema, setTema] = useState('');
@@ -24,7 +20,8 @@ export default function AtividadeHistoria() {
     async function gerarAtividade() {
         setLoading(true);
 
-        const prompt = `Gere uma atividade completa para aula de História, em MARKDOWN.
+        const prompt = `
+Gere uma atividade completa para aula de História, em MARKDOWN.
 
 Tema: ${tema}
 Descrição breve: ${descricao}
@@ -32,7 +29,8 @@ Tipo de atividade: ${tipo}
 Número de estudantes: ${numEstudantes}
 Série: ${serie}
 
-A resposta deve conter: objetivo, materiais necessários, passo a passo, critérios de avaliação e versão imprimível.`;
+A resposta deve conter: objetivo, materiais necessários, passo a passo, critérios de avaliação e versão imprimível.
+`;
 
         let respostaIA = "Erro ao gerar atividade.";
 
@@ -43,11 +41,7 @@ A resposta deve conter: objetivo, materiais necessários, passo a passo, critér
                     {
                         contents: [
                             {
-                                parts: [
-                                    {
-                                        text: prompt
-                                    }
-                                ]
+                                parts: [{ text: prompt }]
                             }
                         ]
                     },
@@ -58,8 +52,7 @@ A resposta deve conter: objetivo, materiais necessários, passo a passo, critér
                 );
 
                 respostaIA = res.data.candidates[0]?.content?.parts[0]?.text || respostaIA;
-                break; // Sai do loop se funcionar
-                // eslint-disable-next-line no-unused-vars
+                break;
             } catch (err) {
                 console.warn(`Erro com a chave ${key}, tentando a próxima...`);
             }
@@ -68,8 +61,6 @@ A resposta deve conter: objetivo, materiais necessários, passo a passo, critér
         setResultado(respostaIA);
         setLoading(false);
     }
-
-    // Gerar e baixar PDF
 
     function baixarPDF() {
         const elemento = document.getElementById("conteudo-markdown");
@@ -84,45 +75,44 @@ A resposta deve conter: objetivo, materiais necessários, passo a passo, critér
         html2pdf().set(opt).from(elemento).save();
     }
 
-
     return (
-        <div style={{ padding: 20, maxWidth: 600, margin: '0 auto' }}>
-            <h2>Gerar Atividade de História</h2>
+        <div className="atividade-container">
+            <h2 className="atividade-titulo">Gerar Atividade de História</h2>
 
             <input
+                className="atividade-input"
                 placeholder="Tema"
                 value={tema}
                 onChange={(e) => setTema(e.target.value)}
-                style={{ width: '100%', marginBottom: 10 }}
             />
 
             <textarea
+                className="atividade-textarea"
                 placeholder="Descrição breve"
                 value={descricao}
                 onChange={(e) => setDescricao(e.target.value)}
-                style={{ width: '100%', marginBottom: 10 }}
             />
 
             <select
+                className="atividade-select"
                 value={tipo}
                 onChange={(e) => setTipo(e.target.value)}
-                style={{ width: '100%', marginBottom: 10 }}
             >
                 <option value="individual">Individual</option>
                 <option value="grupo">Grupo</option>
             </select>
 
             <input
+                className="atividade-input"
                 placeholder="Número de estudantes"
                 value={numEstudantes}
                 onChange={(e) => setNumEstudantes(e.target.value)}
-                style={{ width: '100%', marginBottom: 10 }}
             />
 
             <select
+                className="atividade-select"
                 value={serie}
                 onChange={(e) => setSerie(e.target.value)}
-                style={{ width: '100%', marginBottom: 20 }}
             >
                 <option value="">Selecione a série</option>
                 <option value="6º ano">6º ano</option>
@@ -134,21 +124,21 @@ A resposta deve conter: objetivo, materiais necessários, passo a passo, critér
                 <option value="3º ano">3º ano do Ensino Médio</option>
             </select>
 
-            <button onClick={gerarAtividade} disabled={loading}>
+            <button className="btn-gerar" onClick={gerarAtividade} disabled={loading}>
                 {loading ? 'Gerando...' : 'Gerar Atividade'}
             </button>
 
             {resultado && (
                 <>
-                    <h3>Resultado:</h3>
-                    <div
-                        id="conteudo-markdown"
-                        style={{ padding: 20, background: "#fff", color: "#000" }}
-                    >
+                    <h3 className="resultado-titulo">Resultado:</h3>
+
+                    <div id="conteudo-markdown" className="resultado-container">
                         <ReactMarkdown>{resultado}</ReactMarkdown>
                     </div>
 
-                    <button onClick={baixarPDF}>Baixar PDF</button>
+                    <button className="btn-pdf" onClick={baixarPDF}>
+                        Baixar PDF
+                    </button>
                 </>
             )}
         </div>
