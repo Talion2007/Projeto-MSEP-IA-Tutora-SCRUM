@@ -1,0 +1,129 @@
+/* ======== Layout Geral ======== */
+.atividade-container {
+  max-width: 75vw;
+  margin: 40px auto;
+  padding: 2%;
+  border-radius: 18px;
+  
+
+  background: #064E3B; /* Fundo verde claro */
+  border: 1px solid #064E3B;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .08);
+
+  color: #2d4b3a;
+  font-family: "Inter", sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ======== Título ======== */
+.atividade-titulo {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  color: #e9ec36;   /* Amarelo pastel */
+  margin-bottom: 10px;
+}
+
+/* ======== Inputs Modernos ======== */
+.atividade-input,
+.atividade-select,
+.atividade-textarea {
+  width: 100%;
+  padding: 13px 15px;
+  border-radius: 10px;
+  padding: 1.5%;
+  margin-bottom: 2%; 
+
+
+  background: #1CA672;
+  border: 1px solid #1CA672;
+
+  font-size: 15px;
+  outline: none;
+  transition: 0.18s;
+  color: #f1ff2c;
+}
+
+.atividade-input::placeholder,
+.atividade-textarea::placeholder {
+  color: #f1ff2c;
+}
+
+.atividade-input:focus,
+.atividade-select:focus,
+.atividade-textarea:focus {
+  border-color: #78d697;
+  box-shadow: 0 0 0 3px rgba(120, 214, 151, 0.25);
+}
+
+/* Textarea */
+.atividade-textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+/* ======== Botões ======== */
+.btn-gerar,
+.btn-pdf {
+  margin-top: 6px;
+  padding: 13px 16px;
+  border-radius: 10px;
+
+  border: none;
+  cursor: pointer;
+
+  background: #7ddf9a;  
+  color: #000000;
+  font-weight: 700;
+  font-size: 16px;
+
+  transition: 0.22s;
+}
+
+.btn-gerar:hover,
+.btn-pdf:hover {
+  background:#e9ec36;   /* Amarelo suave no hover */
+  color: #2d4b3a;
+  transform: scale(1,1.1);
+  
+}
+
+.btn-gerar:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ======== Resultado ======== */
+.resultado-titulo {
+  color: #F7D774; /* Amarelo pastel */
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.resultado-container {
+  margin-top: 8px;
+  padding: 20px;
+  border-radius: 14px;
+
+  background: #f4fcf6;
+  border: 1px solid #cfe9d6;
+
+  color: #2d4b3a;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Markdown interna */
+.resultado-container h1,
+.resultado-container h2,
+.resultado-container h3 {
+  color:#EEDB95; /* Amarelo clarinho */
+  margin-top: 12px;
+}
+
+.resultado-container ul {
+  padding-left: 20px;
+}
