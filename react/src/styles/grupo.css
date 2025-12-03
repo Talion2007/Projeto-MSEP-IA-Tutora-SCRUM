@@ -1,0 +1,115 @@
+/* Fundo geral */
+body {
+  background-color: #0E5A4B;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #E8E814;
+}
+
+/* Container principal */
+.page-container {
+  width: 80%;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Topo */
+.top-bar {
+  display: flex;
+  align-items: center;
+  color: #E8E814;
+}
+
+.top-bar h1 {
+  flex: 1;
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* Logo do topo */
+.logo-top {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+/* Caixas */
+.box {
+  background-color: #1FA989;
+  padding: 20px;
+  border-radius: 15px;
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+/* Fotos individuais */
+.box img {
+  width: 135px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: 0.25s ease;
+}
+
+/* Hover com brilho */
+.box img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 18px 7px white;
+}
+
+
+/* Foto do grupo */ 
+.foto-grupo-container {
+background-color: #1FA989;
+padding: 30px;
+border-radius: 15px;
+width: 89%;
+margin: 20px auto;
+display: flex;
+justify-content: center; 
+}
+
+/* Hover na foto do grupo */
+.foto-grupo-img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 18px 7px rgb(255, 255, 255);
+}
+
+.foto-grupo-img {
+  width: 380px;   /* <<< diminua aqui se quiser menor */
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Footer */
+.footer {
+  background-color: #166755;
+  width: 90%;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Contatos */
+.footer-contacts p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #E8E814;
+}
+
+/* Logo no footer */
+.logo-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: contain;
+  cursor: pointer;
+}
