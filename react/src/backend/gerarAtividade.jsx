@@ -1,7 +1,11 @@
 import axios from "axios";
-import { apiCagnin, apiFelipe, apiKnight, apiCorreia } from "./keys.js";
 
-const apiKeys = [apiCagnin, apiFelipe, apiKnight, apiCorreia];
+const apiKeys = [
+    import.meta.env.VITE_API_CAGNIN,
+    import.meta.env.VITE_API_FELIPE,
+    import.meta.env.VITE_API_KNIGHT,
+    import.meta.env.VITE_API_CORREIA,
+];
 
 export async function gerarAtividadeHistoria(dados) {
     const { tema, descricao, tipo, numEstudantes, serie } = dados;
