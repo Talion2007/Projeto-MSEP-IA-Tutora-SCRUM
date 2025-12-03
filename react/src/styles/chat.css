@@ -71,23 +71,22 @@
   margin-top: 6px;
   padding: 13px 16px;
   border-radius: 10px;
-
   border: none;
   cursor: pointer;
-
   background: #7ddf9a;  
   color: #000000;
   font-weight: 700;
   font-size: 16px;
-
   transition: 0.22s;
+  display: inline-block;
+  margin-right: 15px;
 }
 
 .btn-gerar:hover,
 .btn-pdf:hover {
   background:#e9ec36;   /* Amarelo suave no hover */
   color: #2d4b3a;
-  transform: scale(1,1.1);
+  transform: scale(1.1,1.1);
   
 }
 
@@ -126,4 +125,136 @@
 
 .resultado-container ul {
   padding-left: 20px;
+}
+
+/* ======== Galeria de Propagandas ======== */
+
+.imagens-wrapper {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+}
+
+/* Estilo geral das imagens */
+.imagem-decorativa {
+  width: 260px;                  
+  height: 150px;                 
+  object-fit: cover;             
+  border-radius: 14px;          
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.28); 
+  border: 3px solid #F1F900; 
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  background: #064E3B;
+  display: inline-block;
+  margin-right: 50px;         
+}
+
+/* Efeito quando passar o mouse */
+.imagem-decorativa:hover {
+  transform: scale(1.05);        /* aumenta suavemente */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Versão menor para telas pequenas */
+@media (max-width: 600px) {
+  .imagem-decorativa {
+    width: 100%;
+    height: 160px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* ======== Markdown Bonito & Moderno ======== */
+
+.resultado-container {
+  background: #FFFFFF;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+  color: #1A1A1A;
+  font-family: "Inter", sans-serif;
+  line-height: 2;
+  max-width: 700px;
+    max-width: 100%;
+  margin: 25px auto;
+  padding: 28px;
+}
+
+/* Títulos */
+.resultado-container h1,
+.resultado-container h2,
+.resultado-container h3 {
+  color: #064E3B;       /* verde elegante */
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+/* Parágrafos */
+.resultado-container p {
+  margin-bottom: 14px;
+  font-size: 1.05rem;
+}
+
+/* Listas */
+.resultado-container ul,
+.resultado-container ol {
+  margin-left: 22px;
+  margin-bottom: 15px;
+}
+
+.resultado-container li {
+  margin-bottom: 6px;
+}
+
+/* Destaques */
+.resultado-container strong {
+  color: #0B735A;
+}
+
+/* Código */
+.resultado-container code {
+  background: #F4F4F4;
+  padding: 3px 6px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: "Roboto Mono", monospace;
+}
+
+/* Bloco de código */
+.resultado-container pre {
+  background: #0B3F32;
+  color: #F1F1F1;
+  padding: 15px;
+  overflow-x: auto;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  font-size: 0.95rem;
+}
+
+/* Linhas de separação */
+.resultado-container hr {
+  border: none;
+  border-top: 2px solid #EAEAEA;
+  margin: 20px 0;
+   height: 1px; /* quanto MAIOR, mais grossa */
+}
+
+/* Links */
+.resultado-container a {
+  color: #0A8F67;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.resultado-container a:hover {
+  text-decoration: underline;
 }
