@@ -1,0 +1,16 @@
+/* ======== ESTILO IGUAL AO WIREFRAME ======== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Fundo principal */
+body {
+  background-color: #CDECCF; /* verde escuro */
+  color: #F4F000; /* amarelo */
+}
+
+
