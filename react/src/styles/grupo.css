@@ -1,3 +1,10 @@
+/* Fundo geral */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #E8E814;
+}
+
 /* Container principal */
 .page-container {
   width: 80%;
@@ -9,7 +16,7 @@
 .top-bar {
   display: flex;
   align-items: center;
-  color: #e8e814;
+  color: #E8E814;
 }
 
 .top-bar h1 {
@@ -29,7 +36,7 @@
 
 /* Caixas */
 .box {
-  background-color: #1fa989;
+  background-color: #1FA989;
   padding: 20px;
   border-radius: 15px;
   width: 90%;
@@ -54,15 +61,16 @@
   box-shadow: 0 0 18px 7px white;
 }
 
-/* Foto do grupo */
+
+/* Foto do grupo */ 
 .foto-grupo-container {
-  background-color: #1fa989;
-  padding: 30px;
-  border-radius: 15px;
-  width: 89%;
-  margin: 20px auto;
-  display: flex;
-  justify-content: center;
+background-color: #1FA989;
+padding: 30px;
+border-radius: 15px;
+width: 89%;
+margin: 20px auto;
+display: flex;
+justify-content: center; 
 }
 
 /* Hover na foto do grupo */
@@ -72,7 +80,7 @@
 }
 
 .foto-grupo-img {
-  width: 380px; /* <<< diminua aqui se quiser menor */
+  width: 380px;   /* <<< diminua aqui se quiser menor */
   height: auto;
   border-radius: 12px;
 }
@@ -93,7 +101,7 @@
 .footer-contacts p {
   margin: 5px 0;
   font-size: 16px;
-  color: #e8e814;
+  color: #E8E814;
 }
 
 /* Logo no footer */
