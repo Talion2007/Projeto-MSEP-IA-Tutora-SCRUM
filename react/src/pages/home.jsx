@@ -1,8 +1,10 @@
 import React from "react";
 import "../styles/home.css";
+import logoImg from "../assets/Logo.png";
 
 export default function HomePage() {
   return (
+    <div>
     <div className="container">
       <main className="content">
         <h1 className="section-title">Assistente AI - Professor João Miguel</h1>
@@ -61,6 +63,25 @@ export default function HomePage() {
           </button>
         </div>
       </main>
+       
+       <section>
+        
+       </section>
+    </div>
+    <footer className="container-footer">
+              <div className="footer">
+      
+          
+                <div className="footer-contacts">
+                  <p><strong>Instagram:</strong> Alfa.One_oficial</p>
+                  <p><strong>GitHub:</strong> Alfa One Development</p>
+                  <p><strong>Contato:</strong> Alfa_One_Development@gmail.com</p>
+                </div>
+      
+              
+                <img src={logoImg} alt="Logo" className="logo-img" />
+              </div>
+            </footer>
     </div>
   );
 }
