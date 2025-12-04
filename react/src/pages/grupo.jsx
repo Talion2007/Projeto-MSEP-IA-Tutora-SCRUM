@@ -15,8 +15,11 @@ export default function GrupoPage() {
     <div className="page-container">
       {/* Top bar */}
       <header className="top-bar">
-        <button className="back-btn" aria-label="Voltar">
-          ←
+        <button
+          className="botao-voltar"
+          onClick={() => (window.location.href = "/")}
+        >
+          ⬅ Voltar
         </button>
 
         <h1>GRUPO</h1>

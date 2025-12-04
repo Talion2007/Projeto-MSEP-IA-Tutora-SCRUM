@@ -1,162 +1,102 @@
-.container {
-  background: #0f4e45;
-  min-height: 150vh;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  align-items: center;
-}
 
-/* Header */
-.headerBox {
-  background: #146754;
-  width: 90%;
-  padding: 30px;
-  border-radius: 12px;
-  text-align: center;
-}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  body {
+    background: #f2f6f2; /* verde clarinho, suave */
+    color: #333;
+  }
+  
 
-.title {
-  color: #d7ff00;
-  font-size: 28px;
-  margin: 0;
-}
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
 
-.subtitle {
-  color: #d7ff00;
-  margin-bottom: 25px;
-}
+  .section-title,
+  .cta-section h3 {
+   
+    font-weight: bold;
+    color: #2a6f3c; 
+    margin-bottom: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
 
-.mainButton {
-  background: #f6ff3a;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-}
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
 
-/* Features */
-.featuresRow {
-  display: flex;
-  gap: 20px;
-  width: 90%;
-  justify-content: center;
-}
+  .feature-card {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: 0.2s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+  }
+  
 
-.featureBox {
-  background: #146754;
-  color: #ccff66;
-  padding: 20px;
-  border-radius: 10px;
-  flex: 1;
-  text-align: center;
-  font-weight: bold;
-}
+  
 
-/* Chat Section */
-.chatSection {
-  background: #146754;
-  width: 90%;
-  padding: 20px;
-  border-radius: 12px;
-}
+  .feature-card h4 {
+    font-size: 18px;
+    color: #2a6f3c;
+    font-weight: bold;
+  }
+  
+  .feature-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+  }
+  
 
-.chatTitle {
-  color: #d7ff00;
-  margin-bottom: 15px;
-}
 
-.chatContent {
-  display: flex;
-  gap: 20px;
-}
+  .cta-section {
+    margin-top: 55px;
+    text-align: center;
+  }
+  
+  .cta-section p {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    color: #555;
+  }
+  
+  .cta-button {
+    padding: 12px 26px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background: #f4d03f; /* amarelo */
+    color: #2a2a2a;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+  
+  .cta-button:hover {
+    background: #e6bf34;
+  }
 
-.leftInfoBox {
-  flex: 1;
-  background: #2eb897;
-  padding: 15px;
-  border-radius: 10px;
-}
-
-.textBlock {
-  height: 60px;
-  background: rgba(255, 255, 255, 0.3);
-  margin-bottom: 15px;
-}
-
-.textBlockSmall {
-  height: 50px;
-  background: rgba(255, 255, 255, 0.3);
-}
-
-/* Chat Box */
-.chatBox {
-  flex: 1;
-  background: #003e34;
-  padding: 15px;
-  border-radius: 10px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.msg {
-  background: #1fa16b;
-  padding: 10px;
-  border-radius: 8px;
-  width: fit-content;
-}
-
-.inputArea {
-  margin-top: auto;
-  display: flex;
-  gap: 5px;
-}
-
-.input {
-  flex: 1;
-  padding: 8px;
-  border-radius: 6px;
-  border: none;
-}
-
-.sendBtn {
-  background: #1fa16b;
-  border: none;
-  padding: 10px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  color: black;
-}
-
-/* Footer */
-.footer {
-  display: flex;
-  width: 90%;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.footerBtn {
-  background: #f6ff3a;
-  padding: 12px 20px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.logoBtn {
-  background: #f6ff3a;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-}
+  
+  .features-section{
+    display: flex;
+    align-items: center;
+  }
