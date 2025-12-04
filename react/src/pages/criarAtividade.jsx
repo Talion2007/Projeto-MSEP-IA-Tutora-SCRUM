@@ -9,30 +9,30 @@ import Imagem3 from "../assets/imagem3.png";
 import "../styles/chat.css";
 
 export default function AtividadeHistoria() {
-  const [tema, setTema] = useState("");
-  const [descricao, setDescricao] = useState("");
-  const [tipo, setTipo] = useState("individual");
-  const [numEstudantes, setNumEstudantes] = useState("");
-  const [serie, setSerie] = useState("");
-  const [resultado, setResultado] = useState("");
-  const [loading, setLoading] = useState(false);
+    const [tema, setTema] = useState("");
+    const [descricao, setDescricao] = useState("");
+    const [tipo, setTipo] = useState("individual");
+    const [numEstudantes, setNumEstudantes] = useState("");
+    const [serie, setSerie] = useState("");
+    const [resultado, setResultado] = useState("");
+    const [loading, setLoading] = useState(false);
 
-  async function gerarAtividade() {
-    setLoading(true);
-    const resposta = await gerarAtividadeHistoria({
-      tema,
-      descricao,
-      tipo,
-      numEstudantes,
-      serie,
-    });
-    setResultado(resposta);
-    setLoading(false);
-  }
+    async function gerarAtividade() {
+        setLoading(true);
+        const resposta = await gerarAtividadeHistoria({
+            tema,
+            descricao,
+            tipo,
+            numEstudantes,
+            serie,
+        });
+        setResultado(resposta);
+        setLoading(false);
+    }
 
-  function baixarPDF() {
-    gerarPDF(tema, serie);
-  }
+    function baixarPDF() {
+        gerarPDF(tema, serie);
+    }
 
   return (
     <>

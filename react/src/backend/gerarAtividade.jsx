@@ -3,11 +3,8 @@ import axios from "axios";
 const apiKeys = [
     import.meta.env.VITE_API_CAGNIN,
     import.meta.env.VITE_API_FELIPE,
-    import.meta.env.VITE_API_KNIGHT,
-    import.meta.env.VITE_API_CORREIA,
+    import.meta.env.VITE_API_KNIGHT
 ];
-
-console.log("CAGNIN:", import.meta.env.VITE_API_CAGNIN);
 
 console.log(import.meta.env)
 
