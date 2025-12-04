@@ -30,7 +30,7 @@
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
+  gap: 5%;
 }
 
 .feature-card {
@@ -42,6 +42,7 @@
   flex-direction: column;
   gap: 10px;
   transition: 0.2s ease;
+  
 }
 
 .feature-card:hover {
@@ -92,4 +93,44 @@
   .features-section{
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
   }
+
+  /* ======== INTRO ======== */
+.intro-section {
+  background: #064e3b;
+  padding: 25px;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  border: 1px solid #04643a;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .15);
+  color: #f1f900; /* Amarelo */
+}
+
+.intro-section h2 {
+  margin-bottom: 12px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #f1f900;
+}
+
+.intro-section p {
+  font-size: 1.05rem;
+  line-height: 1.6rem;
+  color: #ffffffd2;
+}
+
+
+.footer-link {
+  color: #f1f900; /* Amarelo do seu tema */
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
