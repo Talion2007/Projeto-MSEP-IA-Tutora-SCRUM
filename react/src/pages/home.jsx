@@ -26,22 +26,21 @@ export default function HomePage() {
               abordagens didáticas e fortalecer a identidade educacional
               aplicada em sala de aula.
               <br />
-              <br />
-               É importante esclarecer que esta versão
-              da aplicação utiliza uma chave de API Gemini gratuita ou
-              compartilhada, com limite diário e mensal de tokens. Quando esse
-              limite é atingido, a inteligência artificial para de funcionar
-              temporariamente até o próximo ciclo de renovação. Portanto, o
-              projeto não foi concebido para uso permanente e ininterrupto ao
-              longo de todo o ano letivo. Se você, professor, deseja ter o
-              assistente disponível de forma contínua, sem interrupções, durante
-              todo o período escolar (ou para sempre), será necessário adquirir
-              uma chave API Gemini Pro paga. Para conhecer os valores atuais, os
-              planos com maior ou ilimitado volume de tokens e as instruções de
-              integração definitiva, entre em contato com o grupo responsável
-              pelo desenvolvimento — eles fornecerão a orientação completa e os
-              dados necessários para tornar a ferramenta 100% sua e funcional o
-              ano inteiro.
+              <br />É importante esclarecer que esta versão da aplicação utiliza
+              uma chave de API Gemini gratuita ou compartilhada, com limite
+              diário e mensal de tokens. Quando esse limite é atingido, a
+              inteligência artificial para de funcionar temporariamente até o
+              próximo ciclo de renovação. Portanto, o projeto não foi concebido
+              para uso permanente e ininterrupto ao longo de todo o ano letivo.
+              Se você, professor, deseja ter o assistente disponível de forma
+              contínua, sem interrupções, durante todo o período escolar (ou
+              para sempre), será necessário adquirir uma chave API Gemini Pro
+              paga. Para conhecer os valores atuais, os planos com maior ou
+              ilimitado volume de tokens e as instruções de integração
+              definitiva, entre em contato com o grupo responsável pelo
+              desenvolvimento — eles fornecerão a orientação completa e os dados
+              necessários para tornar a ferramenta 100% sua e funcional o ano
+              inteiro.
             </p>
           </section>
 
@@ -117,26 +116,27 @@ export default function HomePage() {
         <div className="footer">
           <div className="footer-contacts">
             <p>
-              <strong>Instagram:</strong> Alfa.One_oficial
+              <strong>Instagram:</strong> @felipe_cagnin - @mu_correia{" "}
             </p>
             <p>
-              <strong>GitHub:</strong> Alfa One Development
+              <strong>GitHub:</strong> https://github.com/Alfa-One-Development
             </p>
             <p>
-              <strong>Contato:</strong> Alfa_One_Development@gmail.com
+              <strong>Contato:</strong> felipe.cagnin.lima@gmail.com -
+              mucorreia008@gmail.com
             </p>
 
-            {/* Link em formato de <p> */}
-            <p>
-              <a
-                href="https://docs.google.com/document/d/1JpO7CkvOSl_JNDObUYzykHD4WwUq9kxqE-9m8Ctc-34/edit?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer-link"
-              >
-                Acessar Manual do Usuário
-              </a>
-            </p>
+            <button
+              onClick={() =>
+                window.open(
+                  "https://docs.google.com/document/d/1JpO7CkvOSl_JNDObUYzykHD4WwUq9kxqE-9m8Ctc-34/edit?usp=sharing",
+                  "_blank"
+                )
+              }
+              className="footer-link"
+            >
+              Acessar Manual do Usuário
+            </button>
           </div>
 
           <img src={logoImg} alt="Logo" className="logo-img" />
