@@ -4,7 +4,9 @@ const apiKeys = [
     import.meta.env.VITE_API_CAGNIN,
     import.meta.env.VITE_API_FELIPE,
     import.meta.env.VITE_API_KNIGHT,
-    import.meta.env.VITE_API_CORREIA
+    import.meta.env.VITE_API_CORREIA,
+    import.meta.env.VITE_API_BESSON,
+    import.meta.env.VITE_API_WILLIAM
 ];
 
 console.log(import.meta.env)
@@ -27,7 +29,7 @@ A resposta deve conter: objetivo, materiais necessários, passo a passo, critér
     for (let key of apiKeys) {
         try {
             const res = await axios.post(
-                "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent",
+                "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
                 {
                     contents: [
                         {
@@ -39,7 +41,7 @@ A resposta deve conter: objetivo, materiais necessários, passo a passo, critér
                 },
                 {
                     headers: { "Content-Type": "application/json" },
-                    params: { key }
+                    params: { key: key }
                 }
             );
 
