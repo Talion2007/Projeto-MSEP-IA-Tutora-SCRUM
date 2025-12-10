@@ -36,7 +36,7 @@ body {
 
 /* Caixas */
 .box {
-  background-color: #1FA989;
+  background-color: #166755;
   padding: 20px;
   border-radius: 15px;
   width: 90%;
@@ -48,41 +48,52 @@ body {
 
 /* Fotos individuais */
 .box img {
-  width: 135px;
-  height: 160px;
+  width: 200px;
+  height: 230px;
   object-fit: cover;
   border-radius: 8px;
   transition: 0.25s ease;
 }
 
-/* Hover com brilho */
-.box img:hover {
-  transform: scale(1.06);
-  box-shadow: 0 0 18px 7px white;
-}
+
+
+
 
 
 /* Foto do grupo */ 
 .foto-grupo-container {
-background-color: #1FA989;
+background-color: #166755;
 padding: 30px;
 border-radius: 15px;
 width: 89%;
 margin: 20px auto;
 display: flex;
 justify-content: center; 
+display: flex;
+flex-direction: row;
+align-items: center;
+
+h1{
+  margin-bottom: 20px;
+ 
+  color: #ffffff;
+}
 }
 
 /* Hover na foto do grupo */
 .foto-grupo-img:hover {
   transform: scale(1.06);
-  box-shadow: 0 0 18px 7px rgb(255, 255, 255);
+transition: 0.25s ease;
+
 }
 
 .foto-grupo-img {
-  width: 380px;   /* <<< diminua aqui se quiser menor */
+  width: 380px;   
   height: auto;
   border-radius: 12px;
+  transition: 0.25s ease;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* Footer */
@@ -105,11 +116,64 @@ justify-content: center;
   padding: 5px;
 }
 
-/* Logo no footer */
+
 .logo-img {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  object-fit: contain;
-  cursor: pointer;
+  width: 280px;
+  height: 280px;
+ display: flex;
+ justify-content: center;
+ align-self: center;
+ border-radius: 10%;
+
+}
+
+.logo-img:hover {
+  transform: scale(1.06);
+  transition: 0.25s ease;
+}
+
+
+.individual{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s ease;
+  
+  h2{
+    margin-top: 10px;
+    color: #ffffff;
+  }
+}
+
+
+.individual:hover {
+  transform: scale(1.10);
+  transition: 0.25s ease;
+}
+
+
+.titli{
+  color: #166755;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+.novadiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.divrow{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
 }
