@@ -11,6 +11,8 @@ const apiKeys = [
 
 console.log(import.meta.env)
 
+const apiTeste = import.meta.env.VITE_API_WILLIAM;
+
 export async function gerarAtividadeHistoria(dados) {
     const { tema, descricao, tipo, numEstudantes, serie } = dados;
 
@@ -41,7 +43,7 @@ A resposta deve conter: objetivo, materiais necessários, passo a passo, critér
                 },
                 {
                     headers: { "Content-Type": "application/json" },
-                    params: { key: key }
+                    params: { key: apiTeste }
                 }
             );
 
