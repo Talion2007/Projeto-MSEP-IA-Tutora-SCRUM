@@ -88,7 +88,7 @@ justify-content: center;
 /* Footer */
 .footer {
   background-color: #166755;
-  width: 90%;
+  width: 97%;
   margin: 30px auto;
   padding: 25px;
   border-radius: 15px;
@@ -102,6 +102,7 @@ justify-content: center;
   margin: 5px 0;
   font-size: 16px;
   color: #E8E814;
+  padding: 5px;
 }
 
 /* Logo no footer */
